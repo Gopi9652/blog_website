@@ -1,0 +1,25 @@
+{% extends 'first/base.html' %}
+{% load static %}
+{% block title %}
+    <title>post detail</title>
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'first/post_detail.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container bg-dark text-light">
+       <div class="row"  id="post_detail">
+            <div class="col-6">
+                {% if post1.image %}
+                    <img src="{{ post1.image.url }}" alt="img" class="img-fluid pt-2">
+                {% endif %}
+            </div>
+            <div class="col-6 pt-5 mt-5">
+                <h1 class="font-weight-bold display-3 text-uppercase"><span>{{ post1.title }}</span></h1>
+                <p>{{ post1.body }}</p>
+                <p><b>Published On:</b>{{ post1.publish }}</p>
+                <p><b>author:</b><span class="text-uppercase font-weight-bold">{{ post1.author }}</span></p>
+            </div>
+       </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'first/base.html' %}
+{% load static %}
+{% block title %}
+    posts_list
+{% endblock %}
+{% block style%}
+<link rel="stylesheet" href="{% static 'first/post_list.css' %}">
+{% endblock %}
+{% block content%}
+    <div>
+        {% if posts %}
+            {% for post in posts %}
+
+                 <div class="container bg-dark mb-2" >
+                      <div class="row align-items-center mx-auto" id="content">
+                          {% if post.image %}
+                              <div id="content" class="col"><img src="{{ post.image.url }}" alt="postimg"></div>
+                          {% endif %}
+                        <div class="col">
+                          <span><p class="h4">{{ post.title }}</p></span>
+                          <p class="text-light">{{ post.body|truncatewords:100 }}<span><a href="{{ post.get_absolute_url }}">..Readmore</a></span></p>
+                        </div>
+                      </div>
+                 </div>
+            {% endfor %}
+            {% else %}
+            <b class="text-light text-center text-uppercase mx-auto"> no posts</b>
+        {% endif %}
+
+    {% endblock %}
+</div>

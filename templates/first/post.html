@@ -1,0 +1,17 @@
+{% extends 'first/base.html' %}
+{% load static %}
+{% block title %}
+    <title>enter post details</title>
+{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'first/post.css' %}">
+{% endblock %}
+{% block content %}
+    <div id="post" class="justify-content-center align-items center text-center mx-auto text-light">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="submit" class="btn btn-outline-light">
+        </form>
+    </div>
+{% endblock %}

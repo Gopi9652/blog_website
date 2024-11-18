@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+span{
+     color: rgb(12, 234, 12);
+    font-style: italic;
+}
+header{
+    max-height: 100vh;
+}
+#navbarNav .nav-item .nav-link:hover {
+    background: rgb(12, 234, 12); /* Light blue background on hover */
+    color: rgb(12, 234, 12); /* Bright green text on hover */
+    border-radius: 5px; /* (Optional) Adds rounded corners to the hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}

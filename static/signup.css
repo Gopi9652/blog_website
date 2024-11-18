@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: black;
+}
+#signup{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    width: 50%;
+    height: auto;
+    background-color: black;
+}
+img{
+    width: 45%;
+    height: auto;
+}
+form input{
+    margin: 1vw;
+    padding:3px;
+    width: 30%;
+    border-radius: 5px;
+}
+form label{
+    color: aliceblue;
+}
