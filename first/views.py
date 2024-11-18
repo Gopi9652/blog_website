@@ -73,12 +73,13 @@ def post_list_view(request):
 
 
 @login_required(login_url='login')
-def post_detail_view(request,year,month,day,title):
+def post_detail_view(request,year,month,day,title,username):
     post1 = get_object_or_404(post,
                               publish__year=year,
                               publish__month=month,
                               publish__day=day,
-                              title=title)
+                              title=title,
+                              author__username=username)
     return render(request,'first/post_detail.html',{"post1":post1})
 
 @login_required(login_url='login')
