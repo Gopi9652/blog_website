@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
 
-# Create your models here.
 class post(models.Model):
     STATUS_CHOICES = (('draft', 'Draft'), ('published', 'Published'));
     image=models.ImageField(upload_to='img/', blank=True, null=True)

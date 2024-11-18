@@ -7,7 +7,6 @@ from first.models import post
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.shortcuts import get_object_or_404
 
-# Create your views here.
 def signup_view(request):
     obj=signup_form()
     if request.method=='POST':

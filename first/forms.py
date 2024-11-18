@@ -26,7 +26,6 @@ class signup_form(forms.ModelForm):
 
     def clean_username(self):
         username = self.cleaned_data.get('username')
-        # Validate if the username is unique
         if User.objects.filter(username=username).exists():
             raise ValidationError('This username is already taken. Please choose another one.')
         return username
