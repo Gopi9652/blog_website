@@ -31,7 +31,4 @@ urlpatterns = [
     path('logout/',views.logout_view,name='logout'),
     re_path('^.*$', views.login_view, name='login'),
 
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

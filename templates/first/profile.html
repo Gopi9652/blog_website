@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="{% static 'first/post_list.css' %}">
 {% endblock %}
 {% block content%}
-    <div>
-    <span>{{ username }}</span>
+     <span class="text-weight-bold text-dark text-uppercase h1 pl-5">WelCome..!  {{ username }}</span>
+    <div class="pt-5 text-center">
         {% if posts %}
             {% for post in posts %}
 

@@ -15,6 +15,8 @@
                       <div class="row align-items-center mx-auto" id="content">
                           {% if post.image %}
                               <div id="content" class="col"><img src="{{ post.image.url }}" alt="postimg" class="img-fluid"></div>
+                              {% else %}
+                              <p>NO IMAGE</p>
                           {% endif %}
                         <div class="col">
                           <span><p class="h4">{{ post.title }}</p></span>
@@ -25,7 +27,7 @@
             {% endfor %}
 
 
-                <div class="paginator">
+                <div class="paginator text-center">
                     <span class="step-links">
                         {% if post_list.has_previous %}
                             <a href="?page={{ post_list.previous_page_number }}">Previous</a>

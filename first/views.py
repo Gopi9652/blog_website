@@ -89,6 +89,7 @@ def latest_posts_view(request):
 
 @login_required(login_url='login')
 def profile_view(request):
+    username=request.session.get('username')
     posts = post.objects.filter(author__username=request.user.username)
     paginator = Paginator(posts,2)
     page_number = request.GET.get('page')
@@ -98,7 +99,7 @@ def profile_view(request):
         posts = paginator.page(1)
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'first/profile.html',{"posts":posts})
+    return render(request, 'first/profile.html',{"posts":posts,"username":username})
 def logout_view(request):
     logout(request)
     return redirect('login')
