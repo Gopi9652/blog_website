@@ -18,7 +18,7 @@
                           {% endif %}
                         <div class="col">
                           <span><p class="h4">{{ post.title }}</p></span>
-                          <p class="text-light">{{ post.body|truncatewords:100 }}<span><a href="{{ post.get_absolute_url }}">..Readmore</a></span></p>
+                          <p class="text-light">{{ post.body|truncatewords:3 }}<span><a href="{{ post.get_absolute_url }}">..Readmore</a></span></p>
                         </div>
                       </div>
                  </div>
